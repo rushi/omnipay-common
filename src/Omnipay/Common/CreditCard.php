@@ -545,6 +545,28 @@ class CreditCard
     }
 
     /**
+     * Store the raw track information from a credit card's magnetic strip
+     *
+     * @param string $value
+     *
+     * @return CreditCard
+     */
+    public function setSwipeData($value)
+    {
+        return $this->setParameter('swipeData', $value);
+    }
+
+    /**
+     * Get the raw track information stored on a credit card's magnetic strip
+     *
+     * @return string
+     */
+    public function getSwipeData()
+    {
+        return $this->getParameter('swipeData');
+    }
+
+    /**
      * Get the card issue number.
      *
      * @return string
